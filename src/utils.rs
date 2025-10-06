@@ -4,8 +4,8 @@ use halo2curves::bn256;
 use halo2curves::ff::Field;
 use halo2curves::group::Curve;
 use halo2curves::CurveExt;
-use rand::{RngCore, SeedableRng};
 use rand_chacha::ChaCha20Rng;
+use rand_chacha::rand_core::{RngCore, SeedableRng};
 use rayon::iter::{
     IndexedParallelIterator, IntoParallelRefIterator, ParallelIterator,
 };

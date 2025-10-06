@@ -7,6 +7,7 @@
 extern crate semolina;
 
 use pasta_curves::pallas;
+use rand_chacha::{ChaCha20Rng, rand_core::SeedableRng};
 
 #[cfg(feature = "cuda")]
 use crate::{cuda, cuda_available, CUDA_OFF};
@@ -127,8 +128,7 @@ pub mod utils {
         group::{ff::Field, Curve},
         pallas,
     };
-    use rand::{RngCore, SeedableRng};
-    use rand_chacha::ChaCha20Rng;
+   use rand_chacha::{ChaCha20Rng, rand_core::{RngCore, SeedableRng}};
     use rayon::iter::{
         IndexedParallelIterator, IntoParallelRefIterator, ParallelIterator,
     };

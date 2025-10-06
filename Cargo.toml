@@ -37,7 +37,7 @@ sppark = "~0.1.2"
 halo2curves = { version = "0.6.0" }
 pasta_curves = { version = "0.5.0", features = ["repr-c"] }
 rand = "^0"
-rand_chacha = "^0"
+rand_chacha = { version = "0.3", features = ["std"] }
 rayon = "1.5"
 
 [build-dependencies]

@@ -8,6 +8,7 @@
 #include <ff/alt_bn128.hpp>
 
 static thread_pool_t da_pool;
+using namespace alt_bn128;
 
 extern "C"
 void mult_pippenger_bn254(jacobian_t<fp_t>& ret,
